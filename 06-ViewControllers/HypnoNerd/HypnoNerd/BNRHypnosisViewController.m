@@ -10,7 +10,10 @@
 #import "BNRHypnosisView.h"
 
 @implementation BNRHypnosisViewController
+{
 
+    BNRHypnosisView *backgroundView ;
+}
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -30,22 +33,47 @@
     return self;
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    NSArray *segmentedArray = [[NSArray alloc]initWithObjects:@"1",@"2",@"3",nil];
+    
+    UISegmentedControl *segCtrl = [[UISegmentedControl alloc] initWithItems:segmentedArray];
+    segCtrl.frame = CGRectMake(80, 40, self.view.bounds.size.width-80*2, 40);
+    segCtrl.userInteractionEnabled = YES;
+    [segCtrl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged ];
+    [self.view addSubview: segCtrl];
+
+}
+
 - (void)loadView
 {
     // Create a view
     CGRect frame = [UIScreen mainScreen].bounds;
-    BNRHypnosisView *backgroundView = [[BNRHypnosisView alloc] initWithFrame:frame];
+   backgroundView = [[BNRHypnosisView alloc] initWithFrame:frame];
 
-    // Set it as *the* view of this view controller
+        // Set it as *the* view of this view controller
     self.view = backgroundView;
 }
 
-- (void)viewDidLoad
-{
-    // Always call the super implementation of viewDidLoad
-    [super viewDidLoad];
+- (void)segmentAction: (UISegmentedControl *)segCtrl{
 
-    NSLog(@"BNRHypnosisViewController loaded its view");
+     NSInteger Index = segCtrl.selectedSegmentIndex;
+    switch (Index) {
+        case 0:
+            backgroundView.circleColor =[UIColor redColor];
+            break;
+        case 1:
+            backgroundView.circleColor =[UIColor yellowColor];
+            break;
+        case 2:
+            backgroundView.circleColor =[UIColor blueColor];
+            break;
+            
+        default:
+            break;
+    }
+
 }
 
 @end
