@@ -27,6 +27,9 @@
 		520EA750187B58F70075B2EC /* Hypno@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 520EA74C187B58F70075B2EC /* Hypno@2x.png */; };
 		520EA751187B58F70075B2EC /* Time.png in Resources */ = {isa = PBXBuildFile; fileRef = 520EA74D187B58F70075B2EC /* Time.png */; };
 		520EA752187B58F70075B2EC /* Time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 520EA74E187B58F70075B2EC /* Time@2x.png */; };
+		63DB846B1CAD61620079E0B5 /* BNRQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DB84691CAD61620079E0B5 /* BNRQuizViewController.m */; };
+		63DB846C1CAD61620079E0B5 /* BNRQuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63DB846A1CAD61620079E0B5 /* BNRQuizViewController.xib */; };
+		63DB846E1CAD626A0079E0B5 /* Quiz-120@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DB846D1CAD626A0079E0B5 /* Quiz-120@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,10 @@
 		520EA74C187B58F70075B2EC /* Hypno@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hypno@2x.png"; sourceTree = "<group>"; };
 		520EA74D187B58F70075B2EC /* Time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Time.png; sourceTree = "<group>"; };
 		520EA74E187B58F70075B2EC /* Time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Time@2x.png"; sourceTree = "<group>"; };
+		63DB84681CAD61620079E0B5 /* BNRQuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRQuizViewController.h; sourceTree = "<group>"; };
+		63DB84691CAD61620079E0B5 /* BNRQuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRQuizViewController.m; sourceTree = "<group>"; };
+		63DB846A1CAD61620079E0B5 /* BNRQuizViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BNRQuizViewController.xib; sourceTree = "<group>"; };
+		63DB846D1CAD626A0079E0B5 /* Quiz-120@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Quiz-120@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,10 +137,14 @@
 				520EA74C187B58F70075B2EC /* Hypno@2x.png */,
 				520EA74D187B58F70075B2EC /* Time.png */,
 				520EA74E187B58F70075B2EC /* Time@2x.png */,
+				63DB846D1CAD626A0079E0B5 /* Quiz-120@2x.png */,
 				520EA720187B562B0075B2EC /* BNRAppDelegate.h */,
 				520EA721187B562B0075B2EC /* BNRAppDelegate.m */,
 				520EA740187B565A0075B2EC /* BNRHypnosisView.h */,
 				520EA741187B565A0075B2EC /* BNRHypnosisView.m */,
+				63DB84681CAD61620079E0B5 /* BNRQuizViewController.h */,
+				63DB84691CAD61620079E0B5 /* BNRQuizViewController.m */,
+				63DB846A1CAD61620079E0B5 /* BNRQuizViewController.xib */,
 				520EA743187B567E0075B2EC /* BNRHypnosisViewController.h */,
 				520EA744187B567E0075B2EC /* BNRHypnosisViewController.m */,
 				520EA746187B56EA0075B2EC /* BNRReminderViewController.h */,
@@ -219,7 +230,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = BNR;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "John Gallagher";
 				TargetAttributes = {
 					520EA728187B562B0075B2EC = {
@@ -253,7 +264,9 @@
 				520EA752187B58F70075B2EC /* Time@2x.png in Resources */,
 				520EA751187B58F70075B2EC /* Time.png in Resources */,
 				520EA74A187B574A0075B2EC /* BNRReminderViewController.xib in Resources */,
+				63DB846E1CAD626A0079E0B5 /* Quiz-120@2x.png in Resources */,
 				520EA71C187B562B0075B2EC /* InfoPlist.strings in Resources */,
+				63DB846C1CAD61620079E0B5 /* BNRQuizViewController.xib in Resources */,
 				520EA74F187B58F70075B2EC /* Hypno.png in Resources */,
 				520EA750187B58F70075B2EC /* Hypno@2x.png in Resources */,
 				520EA724187B562B0075B2EC /* Images.xcassets in Resources */,
@@ -277,6 +290,7 @@
 			files = (
 				520EA745187B567E0075B2EC /* BNRHypnosisViewController.m in Sources */,
 				520EA71E187B562B0075B2EC /* main.m in Sources */,
+				63DB846B1CAD61620079E0B5 /* BNRQuizViewController.m in Sources */,
 				520EA722187B562B0075B2EC /* BNRAppDelegate.m in Sources */,
 				520EA748187B56EA0075B2EC /* BNRReminderViewController.m in Sources */,
 				520EA742187B565A0075B2EC /* BNRHypnosisView.m in Sources */,
@@ -325,7 +339,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -340,6 +353,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -364,7 +378,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -401,6 +414,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HypnoNerd/HypnoNerd-Prefix.pch";
 				INFOPLIST_FILE = "HypnoNerd/HypnoNerd-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bignerdranch.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -414,6 +428,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HypnoNerd/HypnoNerd-Prefix.pch";
 				INFOPLIST_FILE = "HypnoNerd/HypnoNerd-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bignerdranch.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -422,7 +437,6 @@
 		520EA73E187B562B0075B2EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HypnoNerd.app/HypnoNerd";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -436,6 +450,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "HypnoNerdTests/HypnoNerdTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bignerdranch.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -445,7 +460,6 @@
 		520EA73F187B562B0075B2EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HypnoNerd.app/HypnoNerd";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -455,6 +469,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HypnoNerd/HypnoNerd-Prefix.pch";
 				INFOPLIST_FILE = "HypnoNerdTests/HypnoNerdTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bignerdranch.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -480,6 +495,7 @@
 				520EA73C187B562B0075B2EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		520EA73D187B562B0075B2EC /* Build configuration list for PBXNativeTarget "HypnoNerdTests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +504,7 @@
 				520EA73F187B562B0075B2EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

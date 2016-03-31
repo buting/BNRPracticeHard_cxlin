@@ -9,22 +9,24 @@
 #import "BNRAppDelegate.h"
 #import "BNRHypnosisViewController.h"
 #import "BNRReminderViewController.h"
-
+#import "BNRQuizViewController.h"
 @implementation BNRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-
-
+    
     BNRHypnosisViewController *hvc = [[BNRHypnosisViewController alloc] init];
 
     // Look in the appBundle for the file BNRReminderViewController.xib
     BNRReminderViewController *rvc = [[BNRReminderViewController alloc] init];
+    
+    BNRQuizViewController *quizVC = [[BNRQuizViewController alloc] init];
+    
 
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = @[hvc, rvc];
+    tabBarController.viewControllers = @[hvc, rvc, quizVC];
 
     self.window.rootViewController = tabBarController;
 
