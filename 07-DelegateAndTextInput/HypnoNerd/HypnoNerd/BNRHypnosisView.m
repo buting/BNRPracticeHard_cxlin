@@ -23,6 +23,8 @@
         // All BNRHypnosisViews start with a clear background color
         self.backgroundColor = [UIColor clearColor];
         self.circleColor = [UIColor lightGrayColor];
+        self.backgroundColor = [UIColor whiteColor];
+
     }
     return self;
 }
