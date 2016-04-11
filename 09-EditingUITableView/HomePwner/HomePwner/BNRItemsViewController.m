@@ -66,17 +66,26 @@
 {
     // Get a new or recycled cell
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
-
+    UILabel *label = [[UILabel alloc] init];
+    label.text = @"shanchu";
+//    cell.editingAccessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.editingAccessoryView = label;
+//    @property (nonatomic) UITableViewCellAccessoryType    editingAccessoryType;       // default is UITableViewCellAccessoryNone. use to set standard type
+//    @property (nonatomic, strong, nullable) UIView       *editingAccessoryView;       // if set, use custom view. ignore editingAccessoryType. tracks if enabled can calls accessory action
+    
+    
     // Set the text on the cell with the description of the item
     // that is at the nth index of items, where n = row this cell
     // will appear in on the tableview
     NSArray *items = [[BNRItemStore sharedStore] allItems];
+//    NSArray *items = [[BNRItemStore init] allItems];
     BNRItem *item = items[indexPath.row];
 
     cell.textLabel.text = [item description];
 
     return cell;
 }
+
 
 - (void)   tableView:(UITableView *)tableView
   commitEditingStyle:(UITableViewCellEditingStyle)editingStyle

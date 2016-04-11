@@ -24,11 +24,12 @@
 - (instancetype)initWithFrame:(CGRect)r
 {
     self = [super initWithFrame:r];
+    NSLog(@"-> %f ", r.size.height);
 
     if (self) {
         self.linesInProgress = [[NSMutableDictionary alloc] init];
         self.finishedLines = [[NSMutableArray alloc] init];
-        self.backgroundColor = [UIColor grayColor];
+        self.backgroundColor = [UIColor redColor];
         self.multipleTouchEnabled = YES;
 
         UITapGestureRecognizer *doubleTapRecognizer =
