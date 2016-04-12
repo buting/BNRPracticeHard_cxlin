@@ -21,6 +21,16 @@
 
 @implementation BNRDrawView
 
+
+- (int)numberOfLines
+{
+
+    int count;
+    if (self.linesInProgress && self.finishedLines) {
+        count = [self.linesInProgress count] + [self.finishedLines count];
+    }
+    return count;
+}
 - (instancetype)initWithFrame:(CGRect)r
 {
     self = [super initWithFrame:r];
@@ -220,8 +230,8 @@
 {
     NSLog(@"Recognized Double Tap");
     [self.linesInProgress removeAllObjects];
-//    [self.finishedLines removeAllObjects];
-    self.finishedLines = [[NSMutableArray alloc] init]; // 原指向的内存计数自动减一，但是因为line.containingArray（强引用指针）也指向那段内存，所以内存没有得到及时释放。
+    [self.finishedLines removeAllObjects];
+//    self.finishedLines = [[NSMutableArray alloc] init]; // 原指向的内存计数自动减一，但是因为line.containingArray（强引用指针）也指向那段内存，所以内存没有得到及时释放。
     [self setNeedsDisplay];
 }
 
