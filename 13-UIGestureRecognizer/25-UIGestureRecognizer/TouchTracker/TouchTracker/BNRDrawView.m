@@ -165,7 +165,7 @@
     if (gr.state == UIGestureRecognizerStateBegan) {
         CGPoint point = [gr locationInView:self];
         self.selectedLine = [self lineAtPoint:point];
-
+        self.linesInProgress = nil;
         if (self.selectedLine) {
             [self.linesInProgress removeAllObjects];
         }
@@ -229,7 +229,10 @@
 {
     // Let's put in a log statement to see the order of events
     NSLog(@"%@", NSStringFromSelector(_cmd));
-
+    if (self.selectedLine) {
+        self.selectedLine = nil ;
+    }
+    [self.linesInProgress removeAllObjects];
     for (UITouch *t in touches) {
         CGPoint location = [t locationInView:self];
 
@@ -271,7 +274,9 @@
         BNRLine *line = self.linesInProgress[key];
 
         [self.finishedLines addObject:line];
-        [self.linesInProgress removeObjectForKey:key];
+        if (self.linesInProgress) {
+            [self.linesInProgress removeObjectForKey:key];
+        }
     }
 
     [self setNeedsDisplay];
