@@ -40,8 +40,8 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyh-9V-hKs">
-                    <rect key="frame" x="20" y="198" width="280" height="21"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this is ipad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyh-9V-hKs">
+                    <rect key="frame" x="25" y="203" width="280" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="9YO-0j-zCV"/>
                     </constraints>
@@ -96,17 +96,24 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPadProXIB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6I-8f-C8I">
+                    <rect key="frame" x="242.5" y="202" width="62.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Qyh-9V-hKs" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="15g-Hh-bPt"/>
+                <constraint firstItem="Qyh-9V-hKs" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="25" id="15g-Hh-bPt"/>
                 <constraint firstItem="IyW-WC-s8a" firstAttribute="top" secondItem="DcM-Ta-Pno" secondAttribute="bottom" constant="17" id="1Aa-LW-Zk8"/>
                 <constraint firstItem="Wd6-Cs-4VP" firstAttribute="leading" secondItem="IyW-WC-s8a" secondAttribute="trailing" constant="11" id="1hV-4v-qfp"/>
                 <constraint firstItem="nAy-yn-Tdw" firstAttribute="leading" secondItem="DcM-Ta-Pno" secondAttribute="trailing" constant="8" id="27j-mP-vVG"/>
                 <constraint firstAttribute="trailing" secondItem="OL5-8y-X9o" secondAttribute="trailing" constant="20" id="3dO-Xu-pWc"/>
                 <constraint firstItem="Wd6-Cs-4VP" firstAttribute="baseline" secondItem="IyW-WC-s8a" secondAttribute="baseline" id="Ass-E0-l7s"/>
                 <constraint firstItem="JgR-jx-IXE" firstAttribute="baseline" secondItem="OL5-8y-X9o" secondAttribute="baseline" constant="1" id="CCw-06-5Uz"/>
-                <constraint firstAttribute="trailing" secondItem="Qyh-9V-hKs" secondAttribute="trailing" constant="20" id="DNt-KF-W7M"/>
+                <constraint firstAttribute="trailing" secondItem="Qyh-9V-hKs" secondAttribute="trailing" constant="15" id="DNt-KF-W7M"/>
+                <constraint firstItem="f6I-8f-C8I" firstAttribute="baseline" secondItem="Qyh-9V-hKs" secondAttribute="baseline" id="Lgi-QX-Gau"/>
                 <constraint firstAttribute="trailing" secondItem="90u-3n-WF2" secondAttribute="trailing" id="QQ8-Gl-5JS"/>
                 <constraint firstItem="IyW-WC-s8a" firstAttribute="leading" secondItem="DcM-Ta-Pno" secondAttribute="leading" id="RVQ-dq-Zjn"/>
                 <constraint firstItem="JgR-jx-IXE" firstAttribute="leading" secondItem="IyW-WC-s8a" secondAttribute="leading" id="Tuq-lu-dJG"/>
@@ -118,8 +125,10 @@
                 <constraint firstItem="DcM-Ta-Pno" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="kz4-3R-a5m"/>
                 <constraint firstAttribute="bottom" secondItem="90u-3n-WF2" secondAttribute="bottom" id="l7u-p3-yTs"/>
                 <constraint firstItem="nAy-yn-Tdw" firstAttribute="baseline" secondItem="DcM-Ta-Pno" secondAttribute="baseline" id="lLe-jL-vyb"/>
-                <constraint firstItem="Qyh-9V-hKs" firstAttribute="top" secondItem="OL5-8y-X9o" secondAttribute="bottom" constant="8" id="nre-Cd-ThC"/>
+                <constraint firstItem="Qyh-9V-hKs" firstAttribute="top" secondItem="OL5-8y-X9o" secondAttribute="bottom" constant="13" id="nre-Cd-ThC"/>
+                <constraint firstAttribute="trailing" secondItem="f6I-8f-C8I" secondAttribute="trailing" constant="15" id="ur5-v8-8ad"/>
                 <constraint firstItem="OL5-8y-X9o" firstAttribute="leading" secondItem="JgR-jx-IXE" secondAttribute="trailing" constant="12" id="v7L-PZ-cYv"/>
+                <constraint firstItem="f6I-8f-C8I" firstAttribute="height" secondItem="Qyh-9V-hKs" secondAttribute="height" id="zY2-tk-sBc"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <connections>
