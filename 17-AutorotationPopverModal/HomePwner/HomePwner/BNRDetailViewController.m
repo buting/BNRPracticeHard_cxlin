@@ -174,6 +174,10 @@
     [self prepareViewsForOrientation:toInterfaceOrientation];
 }
 
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+  // with animation effect 
+}
+
 - (void)setItem:(BNRItem *)item
 {
     _item = item;
