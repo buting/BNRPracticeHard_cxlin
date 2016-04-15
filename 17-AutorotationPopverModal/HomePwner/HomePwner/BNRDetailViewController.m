@@ -278,7 +278,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
             UISaveVideoAtPathToSavedPhotosAlbum(path, nil, nil, nil);
             NSLog(@"%@",path);
             NSError *error;
-            [[NSFileManager defaultManager] removeItemAtPath:path error:&error];
+//            [[NSFileManager defaultManager] removeItemAtPath:path error:&error];
         }
     }
         

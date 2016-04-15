@@ -132,9 +132,12 @@
         [self.tableView reloadData];
     };
 
+
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:detailViewController];
 
     navController.modalPresentationStyle = UIModalPresentationFormSheet;
+//    navController.modalPresentationStyle = UIModalPresentationCurrentContext;
+//    self.definesPresentationContext = YES;
     
     [self presentViewController:navController animated:YES completion:NULL];
 }
