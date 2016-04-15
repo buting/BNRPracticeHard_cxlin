@@ -65,7 +65,16 @@
     // Get the one document directory from that list
     NSString *documentDirectory = [documentDirectories firstObject];
 
-    return [documentDirectory stringByAppendingPathComponent:@"items.archive"];
+    NSString *archivePath = [documentDirectory stringByAppendingPathComponent:@"items.archive"];
+    NSLog(@"%@",archivePath);
+    return archivePath;
+    
+}
+
+- (void)practiceGetPath{
+    NSArray *dccDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+
 }
 
 - (BOOL)saveChanges
