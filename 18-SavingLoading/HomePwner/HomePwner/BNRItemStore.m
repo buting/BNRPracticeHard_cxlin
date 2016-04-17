@@ -71,11 +71,7 @@
     
 }
 
-- (void)practiceGetPath{
-    NSArray *dccDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    
 
-}
 
 - (BOOL)saveChanges
 {
