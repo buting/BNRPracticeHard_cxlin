@@ -101,7 +101,7 @@
         if (result) {
             self.dictionary[key] = result;
         } else {
-            NSLog(@"Error: unable to find %@", imagePath);
+            NSLog(@" image not set yet :  Error: unable to find %@", imagePath);
         }
     }
     return result;

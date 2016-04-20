@@ -19,7 +19,7 @@
 @property (nonatomic, retain) NSString * itemKey;
 @property (nonatomic, retain) UIImage * thumbnail;
 @property (nonatomic) double orderingValue;
-@property (nonatomic, retain) NSManagedObject *assetType;
+@property (nonatomic, retain) NSManagedObject *assetType; // lcxNote ，property with type 'NSManagedObject' should be in the relationship.
 
 - (void)setThumbnailFromImage:(UIImage *)image;
 

@@ -12,6 +12,9 @@
 
 @implementation BNRAppDelegate
 
+- (BOOL)application:(UIApplication *)application shouldSaveApplicationState:(NSCoder *)coder{
+    return YES;
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

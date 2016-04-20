@@ -140,7 +140,7 @@
     } else {
         order = [[self.privateItems lastObject] orderingValue] + 1.0;
     }
-    NSLog(@"Adding after %d items, order = %.2f", [self.privateItems count], order);
+    NSLog(@"Adding after %lu items, order = %.2f", (unsigned long)[self.privateItems count], order);
 
     BNRItem *item = [NSEntityDescription insertNewObjectForEntityForName:@"BNRItem"
                                                   inManagedObjectContext:self.context];
