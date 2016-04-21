@@ -39,7 +39,7 @@
     self.blueSlider.value = blue;
 
     // Set the background color and text field value
-    self.view.backgroundColor = color;
+//    self.view.backgroundColor = color;
     self.textField.text = self.colorDescription.name;
 }
 

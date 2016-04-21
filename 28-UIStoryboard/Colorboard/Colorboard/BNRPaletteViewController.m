@@ -39,6 +39,9 @@
  numberOfRowsInSection:(NSInteger)section
 {
     return [self.colors count];
+    
+// how could you say so . why could you say so this is not sogood i think. this is something we should think overu
+    // ducky  black one is not so good as you think so , why do not we try it better, ; : ? why are we always cry but do not try practice again and again. we should do it better not stop here.
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
