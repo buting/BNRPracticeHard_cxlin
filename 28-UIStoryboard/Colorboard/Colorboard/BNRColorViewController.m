@@ -27,7 +27,7 @@
     UIColor *color = self.colorDescription.color;
 
     // Get the RGB values out of the UIColor object
-    float red, green, blue;
+    double red, green, blue;
     [color getRed:&red
             green:&green
              blue:&blue
