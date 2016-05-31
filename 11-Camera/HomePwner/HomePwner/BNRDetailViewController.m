@@ -99,10 +99,15 @@
     [self presentViewController:imagePicker animated:YES completion:NULL];
 }
 
-- (IBAction)backgroundTapped:(id)sender
-{
+//- (IBAction)backgroundTapped:(id)sender
+//{
+//    [self.view endEditing:YES];
+//}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 }
+
 
 - (void)imagePickerController:(UIImagePickerController *)picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info
