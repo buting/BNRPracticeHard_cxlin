@@ -39,6 +39,9 @@
  numberOfRowsInSection:(NSInteger)section
 {
     return [self.colors count];
+    
+// how could you say so . why could you say so this is not sogood i think. this is something we should think overu
+    // ducky  black one is not so good as you think so , why do not we try it better, ; : ? why are we always cry but do not try practice again and again. we should do it better not stop here.
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -54,6 +57,8 @@
     return cell;
 }
 
+
+// 本页面控制器内，任何一个视图控件触发了segue，都会进入此 入口方法 进行导流，通过identifier确认是哪一个segue被触发，并推入相应的destinationViewController
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"NewColor"]) {

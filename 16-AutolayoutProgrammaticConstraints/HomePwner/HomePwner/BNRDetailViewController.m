@@ -66,6 +66,22 @@
 
     [self.view addConstraints:horizontalConstraints];
     [self.view addConstraints:verticalConstraints];
+    
+    
+//    // 如果约束是根据另一个约束计算而来的，使用下面这种
+    // 不要同时打开，否则会有冲突。
+//    NSLayoutConstraint *aspectConstraint = [NSLayoutConstraint constraintWithItem:self.imageView
+//                                                                        attribute:NSLayoutAttributeWidth
+//                                                                        relatedBy:NSLayoutRelationEqual
+//                                                                           toItem:self.imageView
+//                                                                        attribute:NSLayoutAttributeHeight
+//                                                                       multiplier:3.0
+//                                                                         constant:0.0];
+//    [self.imageView addConstraint:aspectConstraint];
+}
+
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskAll;
 }
 
 - (void)viewWillAppear:(BOOL)animated

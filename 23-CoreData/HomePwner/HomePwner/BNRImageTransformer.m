@@ -10,27 +10,50 @@
 
 @implementation BNRImageTransformer
 
-+ (Class)transformedValueClass
-{
+//+ (Class)transformedValueClass
+//{
+//    return [UIImage class];
+//}
+
+
++ (Class)transformedValueClass{
+
     return [UIImage class];
 }
 
-- (id)transformedValue:(id)value
-{
+
+- (id)transformedValue:(id)value{
+
     if (!value) {
         return nil;
     }
-
+    
     if ([value isKindOfClass:[NSData class]]) {
         return value;
     }
-
     return UIImagePNGRepresentation(value);
 }
 
-- (id)reverseTransformedValue:(id)value
-{
+- (id)reverseTransformedValue:(id)value{
     return [UIImage imageWithData:value];
 }
+
+//- (id)transformedValue:(id)value
+//{
+//    if (!value) {
+//        return nil;
+//    }
+//
+//    if ([value isKindOfClass:[NSData class]]) {
+//        return value;
+//    }
+//
+//    return UIImagePNGRepresentation(value);
+//}
+//
+//- (id)reverseTransformedValue:(id)value
+//{
+//    return [UIImage imageWithData:value];
+//}
 
 @end

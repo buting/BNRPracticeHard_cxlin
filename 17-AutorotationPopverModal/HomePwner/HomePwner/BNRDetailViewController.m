@@ -104,6 +104,7 @@
 {
     [super viewWillAppear:animated];
 
+//    self.interfaceOrientation
     UIInterfaceOrientation io = [[UIApplication sharedApplication] statusBarOrientation];
     [self prepareViewsForOrientation:io];
 
@@ -174,6 +175,10 @@
     [self prepareViewsForOrientation:toInterfaceOrientation];
 }
 
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+  // with animation effect
+}
+
 - (void)setItem:(BNRItem *)item
 {
     _item = item;
@@ -208,11 +213,16 @@
     // just pick from the photo library
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        NSArray * availableTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
+        imagePicker.mediaTypes = availableTypes;
     } else {
         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
+    
+ 
 
     imagePicker.delegate = self;
+    
 
     // Place image picker on the screen
     // Check for iPad device before instantiating the popover controller
@@ -224,10 +234,20 @@
 
         // Display the popover controller; sender
         // is the camera bar button item
+//        [self.imagePickerPopover presentPopoverFromRect:CGRectMake(0, 0, 800, 100) inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
         [self.imagePickerPopover presentPopoverFromBarButtonItem:sender
                                         permittedArrowDirections:UIPopoverArrowDirectionAny
                                                         animated:YES];
+        
+        
+        
     } else {
+        if([[[UIDevice
+              currentDevice] systemVersion] floatValue]>=8.0) {
+            
+            self.modalPresentationStyle=UIModalPresentationOverCurrentContext;
+            
+        }
         [self presentViewController:imagePicker animated:YES completion:NULL];
     }
 }
@@ -249,6 +269,19 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     }
 
     // Get picked image from info dictionary
+    NSURL *mediaURL = info[UIImagePickerControllerMediaURL];//视频
+    NSString *path = [mediaURL path];
+    if(mediaURL)
+    {
+        if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(path))
+        {
+            UISaveVideoAtPathToSavedPhotosAlbum(path, nil, nil, nil);
+            NSLog(@"%@",path);
+            NSError *error;
+//            [[NSFileManager defaultManager] removeItemAtPath:path error:&error];
+        }
+    }
+        
     UIImage *image = info[UIImagePickerControllerOriginalImage];
 
     // Store the image in the BNRImageStore for this key

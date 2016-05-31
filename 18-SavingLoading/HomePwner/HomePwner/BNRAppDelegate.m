@@ -29,7 +29,38 @@
 
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [self testStringIO];
     return YES;
+}
+
+- (void)testStringIO{
+    
+    [UIView setAnimationsEnabled:NO];
+    
+    NSError *error;
+    NSString *someString = @"Text Data";
+    NSString *pathString = [self PathForKey:@"string001"];
+    BOOL sucess = [someString writeToFile:pathString atomically:YES encoding:NSUTF8StringEncoding error:&error];
+
+    if (!sucess) {
+        NSLog(@"Error writing file :%@ ", [error localizedDescription]);
+    }
+    
+    NSString *myString = [[NSString alloc] initWithContentsOfFile:pathString encoding:NSUTF8StringEncoding error:&error];
+    if (!myString) {
+        NSLog(@"Error reading files : %@",[error localizedDescription]);
+    }
+    NSLog(@"%@ \n",myString);
+}
+
+- (NSString *)PathForKey:(NSString *)key
+{
+    NSArray *documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    NSString *documentDirectory = [documentDirectories firstObject];
+    
+    return [documentDirectory stringByAppendingPathComponent:key];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -46,6 +77,8 @@
     } else {
         NSLog(@"Could not save any of the BNRItems");
     }
+    
+    
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
